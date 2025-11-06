@@ -1,0 +1,138 @@
+body {
+            background: #f4f4f9;
+        }
+
+        .form-container {
+            background: #fff;
+            border: 2px solid #000;
+            /* outer border restored */
+            padding: 28px;
+            margin: 20px auto;
+            max-width: 900px;
+            /* size unchanged */
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .form-header h2 {
+            font-weight: 700;
+            margin-bottom: .25rem;
+        }
+
+        .form-header p {
+            margin: 0;
+        }
+
+        .form-header h5 {
+            margin-top: .75rem;
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+        }
+
+        /* table borders restored */
+        td {
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        td:first-child {
+            width: 28%;
+            /* left column narrower */
+            font-weight: 700;
+            /* bold headings */
+        }
+
+        td:last-child {
+            width: 72%;
+        }
+
+        .form-check-inline {
+            margin-right: 18px;
+        }
+
+        .sub-label {
+            font-weight: 700;
+            display: block;
+            margin-bottom: .25rem;
+        }
+
+        .mb-6px {
+            margin-bottom: 6px;
+        }
+
+        /* Underline inputs outside the table but still real inputs */
+        .underline-label {
+            font-weight: 700;
+            margin-right: .5rem;
+        }
+
+        .underline-field {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #000;
+            outline: none;
+            background: transparent;
+            padding: 2px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .form-heading {
+            font-weight: bold;
+            display: flex;
+        }
+
+        .imagetop {
+            height: 100px;
+        }
+
+        .heading {
+            float: left;
+        }
+
+        .top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* vertically align image and text */
+            gap: 10px;
+            /* space between image and text (set 0 if no space at all) */
+        }
+
+        .top img {
+            width: 80px;
+            height: auto;
+            display: block;
+        }
+
+        .text {
+            line-height: 1;
+            /* makes lines tight */
+        }
+
+        .text p {
+            margin: 0;
+            /* remove extra margin between lines */
+        }
+
+        .content {
+            margin-right: 80px;
+            padding-right: 10px;
+        }

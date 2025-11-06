@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Enquiry - {{ enquiry.student_name }}</title>
+  <style>
+    body {
+      font-family: DejaVu Sans, Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f2f2f2;
+      width: 30%;
+    }
+    .section-title {
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="{{ STATIC_URL }}image/ipslogo.webp" alt="IPS Logo">
+    <h2>IPS Academy</h2>
+    <p><b>Student Inquiry Form</b></p>
+    <hr>
+  </div>
+
+  <p class="section-title">Student Details</p>
+  <table>
+    <tr><th>Student's Name</th><td>{{ enquiry.student_name }}</td></tr>
+    <tr><th>Date of Birth</th><td>{{ enquiry.dob }}</td></tr>
+    <tr><th>Gender</th><td>{{ enquiry.gender }}</td></tr>
+    <tr><th>Category</th><td>{{ enquiry.category }}</td></tr>
+    <tr><th>Mobile</th><td>{{ enquiry.mobile }}</td></tr>
+    <tr><th>WhatsApp</th><td>{{ enquiry.whatsapp }}</td></tr>
+    <tr><th>Email</th><td>{{ enquiry.email }}</td></tr>
+    <tr><th>Interested Course</th><td>{{ enquiry.course }}</td></tr>
+  </table>
+
+  <p class="section-title">Parent Details</p>
+  
+  <table>
+    <tr><th>Father's Name</th><td>{{ enquiry.father_name }}</td></tr>
+    <tr><th>Occupation</th><td>{{ enquiry.occupation }}</td></tr>
+    <tr><th>Annual Income</th><td>{{ enquiry.annual_income }}</td></tr>
+    <tr><th>Father's Mobile</th><td>{{ enquiry.father_mobile }}</td></tr>
+    <tr><th>Mother's Name</th><td>{{ enquiry.mother_name }}</td></tr>
+  </table>
+  <br>
+
+  <p class="section-title">Address</p>
+  <table>
+    <tr><th>Full Address</th>
+      <td>
+        {{ enquiry.address }}, {{ enquiry.city }}, {{ enquiry.district }}<br>
+        {{ enquiry.state }} - {{ enquiry.pincode }}
+      </td>
+    </tr>
+  </table>
+
+  <p class="section-title">Education</p>
+  <table>
+    <tr><th>10th % / Year / Board</th>
+      <td>{{ enquiry.x_percent }} / {{ enquiry.x_year }} / {{ enquiry.x_board }}</td>
+    </tr>
+    <tr><th>12th Stream & % / Year / Board</th>
+      <td>{{ enquiry.xii_stream_percent }} / {{ enquiry.xii_year }} / {{ enquiry.xii_board }}</td>
+    </tr>
+    <tr><th>Graduation</th><td>{{ enquiry.grad_stream_percent }}</td></tr>
+    <tr><th>School</th><td>{{ enquiry.school_name }}</td></tr>
+    <tr><th>College</th><td>{{ enquiry.college_name }}</td></tr>
+    <tr><th>University</th><td>{{ enquiry.university_name }}</td></tr>
+  </table>
+
+ <!-- 
+
+      IF YOU WANT "OTHER INFORMATION" SECTION, UNCOMMENT BELOW----- 
+
+ <p class="section-title">Other Information</p>
+  <table>
+    <tr><th>Source of Information</th>
+      <td>
+        {% if enquiry.src_website %} Website, {% endif %}
+        {% if enquiry.src_newspaper %} Newspaper, {% endif %}
+        {% if enquiry.src_hoarding %} Hoarding, {% endif %}
+        {% if enquiry.src_calling %} Tele-calling, {% endif %}
+        {% if enquiry.src_ads %} Ads, {% endif %}
+        {% if enquiry.src_other %} Other: {{ enquiry.src_other_text }} {% endif %}
+      </td>
+    </tr>
+    <tr><th>Verified By</th><td>{{ enquiry.verified_by }}</td></tr>
+    <tr><th>Remark</th><td>{{ enquiry.remark }}</td></tr>
+    <tr><th>Created At</th><td>{{ enquiry.created_at }}</td></tr>
+  </table> -->
+
+</body>
+</html>
